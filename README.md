@@ -7,3 +7,4 @@ test
 - terraform apply
 - terraform validate
 - terraform fmt
+- terraform destroy

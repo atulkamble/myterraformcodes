@@ -2,7 +2,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "5.48.0"
+      version = "5.84.0"
     }
   }
 }
@@ -12,8 +12,9 @@ provider "aws" {
 }
 
 resource "aws_instance" "webserver" {
-  ami           = "ami-07caf09b362be10b8"
-  instance_type = "t2.micro"
+  ami           = "ami-0ac4dfaf1c5c0cce9"
+  instance_type = "t3.medium"
+  count = "3"
 
   tags = {
     Name = "MyFirstTerraformInstance"
